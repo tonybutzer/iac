@@ -4,4 +4,4 @@ git:
 
 
 bash:
-	docker run -it tbutzer/sphinx bash
+	docker run -it -v `pwd`:/home tbutzer/sphinx bash
