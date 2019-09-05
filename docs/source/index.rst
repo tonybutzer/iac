@@ -10,7 +10,7 @@ Welcome to IAC's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+  outline.md
 
 Indices and tables
 ==================
