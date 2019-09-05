@@ -9,7 +9,7 @@ webServer:
 	docker run --name some-nginx -p 80:80 -v `pwd`/build/html:/usr/share/nginx/html:ro -d nginx
 
 getip:
-	aws s3 describe-instances |grep Public
+	aws ec2 describe-instances --region us-west-2 |grep Public
 
 
 git:
