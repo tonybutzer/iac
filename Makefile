@@ -5,3 +5,8 @@ publish:
 	git add .
 	git commit -m "automatic git update from Makefile"
 	git push
+
+
+docker-enable:
+	#sudo groupadd docker
+	sudo usermod -aG docker ubuntu

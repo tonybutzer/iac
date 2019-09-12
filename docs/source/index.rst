@@ -11,6 +11,7 @@ Welcome to IAC's documentation!
    :caption: Contents:
 
   outline.md
+  monitor.md
 
 Indices and tables
 ==================
