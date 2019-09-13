@@ -1,3 +1,0 @@
-{
-    "Policy": "{\"Version\":\"2012-10-17\",\"Id\":\"Policy1563360701540\",\"Statement\":[{\"Sid\":\"AddCannedAcl\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::574826924367:root\"},\"Action\":[\"s3:PutObject\",\"s3:PutObjectAcl\",\"s3:GetObject\",\"s3:GetObjectAcl\",\"s3:DeleteObject\"],\"Resource\":\"arn:aws:s3:::ga-africa-provisional/*\"},{\"Sid\":\"ListFrom-ga-aws-deafrica\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::565417506782:root\"},\"Action\":\"s3:ListBucket\",\"Resource\":\"arn:aws:s3:::ga-africa-provisional\"},{\"Sid\":\"GetFrom-ga-aws-deafrica\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::565417506782:root\"},\"Action\":\"s3:GetObject\",\"Resource\":\"arn:aws:s3:::ga-africa-provisional/*\"}]}"
-}
