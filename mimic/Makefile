@@ -2,7 +2,11 @@ docker:
 	docker build -t mimic .
 
 bash:
-	docker run -it mimic bash
+	docker run -it -v `pwd`:/opt/cloudmapper mimic bash
+
+run:
+	docker run -it  -v `pwd`:/opt/cloudmapper mimic ./mimic.py collect --account demo
+
 setup:
 	pip3 install pipenv
 	pipenv install --dev --skip-lock

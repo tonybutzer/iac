@@ -4,7 +4,7 @@ import json
 import datetime
 import os.path
 from abc import ABCMeta, abstractmethod
-# from six import add_metaclass
+from six import add_metaclass
 from jinja2 import Template
 
 # from policyuniverse.policy import Policy
@@ -369,8 +369,8 @@ def iam_report(accounts, config, args):
         pass
 
     # Read template
-    with open(os.path.join("templates", "iam_report.html"), "r") as report_template:
-        template = Template(report_template.read())
+    # with open(os.path.join("templates", "iam_report.html"), "r") as report_template:
+        # template = Template(report_template.read())
 
     # Data to be passed to the template
     t = {}
@@ -390,6 +390,7 @@ def iam_report(accounts, config, args):
 
     for region_json in get_regions(account):
         region = Region(account, region_json)
+        print("Region Name ", region.name)
         if region.name == "us-east-1":
             json_account_auth_details = query_aws(
                 region.account, "iam-get-account-authorization-details", region
@@ -638,5 +639,6 @@ def run(arguments):
     )
     parser.set_defaults(show_graph=False)
     args, accounts, config = parse_arguments(arguments, parser)
+    print(args,accounts,config)
 
-    # iam_report(accounts, config, args)
+    iam_report(accounts, config, args)

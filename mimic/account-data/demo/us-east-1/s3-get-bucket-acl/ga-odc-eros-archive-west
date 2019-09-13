@@ -1,0 +1,31 @@
+{
+    "Grants": [
+        {
+            "Grantee": {
+                "DisplayName": "ga-aws-usgs",
+                "ID": "ac38302795e0f7b559c6de2af8af90ea6e72689f25781f7f4f02322757de5c5e",
+                "Type": "CanonicalUser"
+            },
+            "Permission": "FULL_CONTROL"
+        },
+        {
+            "Grantee": {
+                "Type": "Group",
+                "URI": "http://acs.amazonaws.com/groups/global/AllUsers"
+            },
+            "Permission": "READ"
+        },
+        {
+            "Grantee": {
+                "DisplayName": "GS-CHS-Dev-LSDSDPAS",
+                "ID": "ad969c7f424d1c7effeff7b2ae705d482a7d56ec350f0dc09ad953315abc242e",
+                "Type": "CanonicalUser"
+            },
+            "Permission": "FULL_CONTROL"
+        }
+    ],
+    "Owner": {
+        "DisplayName": "ga-aws-usgs",
+        "ID": "ac38302795e0f7b559c6de2af8af90ea6e72689f25781f7f4f02322757de5c5e"
+    }
+}
