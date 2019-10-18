@@ -1,8 +1,2 @@
-start:
-	terraform apply
-
-stop:
-	terraform destroy
-	./renameDefunct.sh butzer-master1
-	./renameDefunct.sh butzer-worker1
-	./renameDefunct.sh butzer-worker2
+run:
+	docker run -i -t -v `pwd`/:/tfinfra tbutzer/terraform bash

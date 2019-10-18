@@ -1,2 +1,0 @@
-run:
-	docker run -i -t -v `pwd`/:/tfinfra rhassan03/terraform bash

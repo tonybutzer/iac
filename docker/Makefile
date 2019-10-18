@@ -1,8 +1,10 @@
-rizbi:
-	docker build --tag rhassan03/terraform .
+Image=tbutzer/terraform
+
+build:
+	docker build --tag ${Image} .
 
 
 push:
-	docker login -u rhassan03
-	docker push rhassan03/terraform
+	docker login -u tbutzer
+	docker push ${Image}
 
