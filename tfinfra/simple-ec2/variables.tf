@@ -23,13 +23,12 @@ variable "test_name" {
 
 variable "key_name" {
   description = "The AWS key pair to use for resources."
-  #default = "CHS-LSDSDPAS-butzer"
-  default = "rhassan"
+  default = "CHS-LSDSDPAS-butzer"
 }
 
 variable "ami" {
   description = "AMI"
-  default = "ami-0def3275"
+  default = "ami-06d51e91cea0dac8d"
 }
 
 
