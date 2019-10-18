@@ -1,0 +1,8 @@
+pinstance.py
+setup.py
+pinstance.egg-info/PKG-INFO
+pinstance.egg-info/SOURCES.txt
+pinstance.egg-info/dependency_links.txt
+pinstance.egg-info/entry_points.txt
+pinstance.egg-info/requires.txt
+pinstance.egg-info/top_level.txt
