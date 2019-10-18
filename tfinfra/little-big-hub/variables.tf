@@ -28,7 +28,7 @@ variable "key_name" {
 
 variable "ami" {
   description = "AMI"
-  default = "ami-0def3275"
+  default = "ami-06d51e91cea0dac8d"
 }
 
 

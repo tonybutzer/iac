@@ -4,14 +4,12 @@
 
 echo "Hello Tony" > /tmp/hellotony.txt
 
-sudo hostname master1
-echo "127.0.0.1 master1" >> /etc/hosts
+sudo hostname bighub1
+echo "127.0.0.1 bighub1" >> /etc/hosts
 sudo mkdir -p /opt
 
-(cd /opt; git clone http://github.com/tonybutzer/djup)
-
-sudo mkdir -p /data; sudo chown ubuntu /data
+(cd /opt; git clone http://github.com/tonybutzer/jup)
 
 sudo chown -R ubuntu /opt
 
-(cd /opt/djup/pkg; ./setup_os.sh)
+(cd /opt/jup/juphub/pkg; ./setup_os.sh)
