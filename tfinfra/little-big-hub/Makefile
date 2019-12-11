@@ -1,14 +1,19 @@
 init:
 	terraform init
-initd:
-	docker run -i -t -v `pwd`/:/tfinfra tbutzer/terraform terraform init
 
-applyd:
-	docker run -i -t -v `pwd`/:/tfinfra tbutzer/terraform terraform apply
+apply:
+	terraform apply
 
-destroyd:
-	docker run -i -t -v `pwd`/:/tfinfra tbutzer/terraform terraform destroy
+destroy:
+	terraform destroy
 	./renameDefunct.sh butzer-little-big-hub1
 
-bash:
-	docker run -i -t -v `pwd`/:/tfinfra tbutzer/terraform bash
+awsregion:
+	# mkdir ~/.aws
+	chmod 700 ~/.aws
+	echo '[default]' > ~/.aws/config
+	echo "region = us-west-2" >> ~/.aws/config
+
+
+git:
+	(cd /opt/iac; make)
