@@ -1,10 +1,12 @@
 init:
+	terraform init
+initd:
 	docker run -i -t -v `pwd`/:/tfinfra tbutzer/terraform terraform init
 
-apply:
+applyd:
 	docker run -i -t -v `pwd`/:/tfinfra tbutzer/terraform terraform apply
 
-destroy:
+destroyd:
 	docker run -i -t -v `pwd`/:/tfinfra tbutzer/terraform terraform destroy
 	./renameDefunct.sh butzer-little-big-hub1
 

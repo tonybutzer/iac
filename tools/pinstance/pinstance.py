@@ -1,5 +1,6 @@
 import click
-import util
+#import util
+import awsutil
 import json
 
 chs=True
@@ -17,7 +18,7 @@ def cli():
 def status():
    """ prints and running instances """
    #print("STATUS")
-   jsonData = util.ec2status()
+   jsonData = awsutil.ec2status()
    jsonBlob = json.loads(jsonData)
    mynew = jsonBlob.get("Reservations")
 
@@ -25,7 +26,7 @@ def status():
       print ('-'*60)
       ids = myDict["Instances"]
       for id in ids:
-         tagName = util.get_tag_name(id)
+         tagName = awsutil.get_tag_name(id)
          iState = id["State"]
          #print (iState["Name"])
          print ("The INSTANCE %s is %s " % (tagName, iState["Name"]))
@@ -42,14 +43,14 @@ def status():
 @click.option('--tag', default='bulkHelper', help="This is the name of the EC2 Instance (tag)", required=True)
 def start(tag):
    """ starts an instance """
-   jsonData = util.ec2status()
+   jsonData = awsutil.ec2status()
    jsonBlob = json.loads(jsonData)
    mynew = jsonBlob.get("Reservations")
 
    for myDict in mynew:
       ids = myDict["Instances"]
       for id in ids:
-         tagName = util.get_tag_name(id)
+         tagName = awsutil.get_tag_name(id)
 
          instanceId = id["InstanceId"]
          iState = id["State"]
@@ -57,14 +58,14 @@ def start(tag):
             print ("The INSTANCE %s is %s " % (tagName, iState["Name"]))
             print ("Starting instance ID %s " % instanceId)
             print("START YOUR Engines %s" % tag)
-            util.ec2start(id=instanceId)
+            awsutil.ec2start(id=instanceId)
 
 
 @cli.command()
 @click.option('--tag', default='bulkHelper', help="This is the name of the EC2 Instance (tag)", required=True)
 def stop(tag):
    """ stops an instance """
-   jsonData = util.ec2status()
+   jsonData = awsutil.ec2status()
    jsonBlob = json.loads(jsonData)
    mynew = jsonBlob.get("Reservations")
 
@@ -74,7 +75,7 @@ def stop(tag):
          #print (id["InstanceType"])
          #print (id["InstanceId"])
          instanceId = id["InstanceId"]
-         tagName = util.get_tag_name(id)
+         tagName = awsutil.get_tag_name(id)
 
          instanceId = id["InstanceId"]
          iState = id["State"]
@@ -82,13 +83,13 @@ def stop(tag):
             print ("Stopping instance ID %s " % instanceId)
             print ("The INSTANCE %s is %s " % (tagName, iState["Name"]))
             print ("KILL YOUR Engines %s" % tag)
-            util.ec2stop(id=instanceId)
+            awsutil.ec2stop(id=instanceId)
 
 @cli.command()
 @click.option('--tag', default='bulkHelper', help="This is the name of the EC2 Instance (tag)", required=True)
 def getip(tag):
    """ gets the public ip of an instance """
-   jsonData = util.ec2status()
+   jsonData = awsutil.ec2status()
    #print (json.dumps(jsonData, indent=2))
    jsonBlob = json.loads(jsonData)
    mynew = jsonBlob.get("Reservations")
@@ -101,7 +102,7 @@ def getip(tag):
          iState = id["State"]
          #print (iState["Name"])
          #print ("The INSTANCE is %s " % iState["Name"])
-         tagName = util.get_tag_name(id)
+         tagName = awsutil.get_tag_name(id)
 
          if (tagName == tag):
             realState = iState["Name"]

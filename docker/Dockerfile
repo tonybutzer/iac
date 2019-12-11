@@ -9,9 +9,9 @@ RUN mkdir /tfinfra \
 
 # uid=7428(rhassan) gid=7428(rhassan)
 
-RUN groupadd -g 7428 riz && \
-    useradd -r -u 7428 -g riz riz
+RUN groupadd -g 1000 ubuntu && \
+    useradd -r -u 1000 -g ubuntu ubuntu
 
-USER riz
+USER ubuntu
 
 WORKDIR /tfinfra

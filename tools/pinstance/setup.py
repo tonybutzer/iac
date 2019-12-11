@@ -3,7 +3,7 @@ from setuptools import setup
 setup (
     name='pinstance', 
     version='1.0',
-    py_modules=['pinstance',],
+    py_modules=['pinstance','awsutil'],
     install_requires=[
         'Click',
     ],
