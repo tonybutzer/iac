@@ -1,3 +1,4 @@
+awsutil.py
 pinstance.py
 setup.py
 pinstance.egg-info/PKG-INFO
