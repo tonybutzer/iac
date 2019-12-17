@@ -6,7 +6,7 @@ apply:
 
 destroy:
 	terraform destroy
-	./renameDefunct.sh butzer-little-big-hub1
+	./renameDefunct.sh butzer-little-micro-hub1
 
 awsregion:
 	# mkdir ~/.aws

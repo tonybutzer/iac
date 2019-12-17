@@ -18,7 +18,7 @@ resource "aws_instance" "hub1" {
   key_name                    = "${var.key_name}"
   subnet_id                   = "${var.subnet_id}"
   tags = {
-    Name = "butzer-little-big-hub1"
+    Name = "butzer-little-micro-hub1"
     Owner = "butzer@contractor.usgs.gov"
     Project = "LPIP"
   }
