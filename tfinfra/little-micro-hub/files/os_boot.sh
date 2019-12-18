@@ -5,8 +5,8 @@
 
 echo "Hello Tony" > /tmp/hellotony.txt
 
-sudo hostname bighub1
-echo "127.0.0.1 bighub1" >> /etc/hosts
+sudo hostname microhub1
+echo "127.0.0.1 microhub1" >> /etc/hosts
 sudo mkdir -p /opt
 
 (cd /opt; git clone http://github.com/tonybutzer/notebook)
