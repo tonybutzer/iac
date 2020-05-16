@@ -1,0 +1,5 @@
+./tfinfra/little-big-hub/variables.tf
+./tfinfra/little-micro-hub/variables.tf
+./tfinfra/chs-odc-hub1/variables.tf
+./tfinfra/little-r-hub/variables.tf
+./tfinfra/simple-ec2/variables.tf

@@ -5,7 +5,7 @@ variable "region" {
 
 variable "master_instance_type" {
   description = "The instance type."
-  default = "c5.2xlarge"
+  default = "t3a.small"
 }
 
 
