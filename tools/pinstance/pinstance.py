@@ -28,8 +28,9 @@ def status():
       for id in ids:
          tagName = awsutil.get_tag_name(id)
          iState = id["State"]
+         iType = id["InstanceType"]
          #print (iState["Name"])
-         print ("The INSTANCE %s is %s " % (tagName, iState["Name"]))
+         print ("The INSTANCE %s is %s -- %s" % (tagName, iState["Name"], iType))
          iState = id["State"]
          #print (iState["Name"])
          realState = iState["Name"]
